@@ -1,0 +1,18 @@
+<div [ngClass]="{ 'translate-x-0': isOpen, 'translate-x-[26rem]': !isOpen }"
+    class="drawer absolute rounded-lg right-0 top-0 w-96 h-[500px] shadow-lg transform transition-transform duration-300 ease-in-out bg-slate-50 z-[1]">
+    <!-- Close button -->
+    <button type="button"
+        class="absolute text-base top-0 right-0 m-4 text-blue-700 font-medium p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500"
+        (click)="onCloseDrawer()"    
+    >X</button>
+
+    <!-- Chatroom content -->
+    <h2 class="text-2xl font-semibold p-4">Chatroom ID - {{ chatroomId }}</h2>
+
+    <div class="h-3/5 bg-slate-100 rounded-lg mx-[20px] my-[20px] overflow-y-auto flex flex-col-reverse">
+      <app-message-list [messages]="messages" [chatroom_id]="chatroomId"></app-message-list>
+    </div>
+    <div class="mx-[20px] my-[20px]">
+      <app-message-input [chatroom_id]="chatroomId"></app-message-input>
+    </div>
+</div>

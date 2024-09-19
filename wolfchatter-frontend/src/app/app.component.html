@@ -1,0 +1,21 @@
+<div class="flex h-screen relative">
+  <a
+    href="#"
+    class="chatroom-btn max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow absolute z-[1]"
+  >
+    <h5
+      class="mb-2 text-l font-bold tracking-tight dark:text-black"
+    >
+      Click on the map to the start the chat.
+    </h5>
+  </a>
+  <div class="w-full">
+    <app-map></app-map>
+  </div>
+  <app-chatroom
+    [chatroomId]="chatroom_id"
+    [messages]="messages"
+    [isOpen]="isOpen"
+    (closeDrawer)="closeChatroom()"
+  ></app-chatroom>
+</div>
