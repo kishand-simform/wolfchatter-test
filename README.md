@@ -70,3 +70,10 @@ npm start
 The frontend app will be available at http://localhost:4200.
 
 Now, both the frontend and backend are running locally. You can open your browser and navigate to http://localhost:4200 to start using the app.
+
+
+Docker Compose Approach
+
+```
+docker-compose up --build
+```
